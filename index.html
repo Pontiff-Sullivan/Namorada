@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Romântico</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <canvas id="fireworks"></canvas>
+<body>
+  <div id="hearts-container"></div>
+
+  <div id="popup-container" class="popup-container hidden">
+    <div class="popup">
+      <p id="popup-message"></p>
+      <button id="popup-ok">OK</button>
+    </div>
+  </div>
+
+  <div id="intro-form" class="form-container">
+    <h2>O SEU NOME É MARIA LUIZA?</h2>
+    <button onclick="introYes()">SIM</button>
+    <button onclick="introNo()">NÃO</button>
+  </div>
+
+  <div id="form-page1" class="form-container hidden">
+    <div class="page-progress">1/15</div>
+    <h2>
+      Se você é realmente ela, preencha esse pequeno formulário de 15 páginas...
+    </h2>
+    
+    <label>Primeiro Nome:</label>
+    <input type="text" id="primeiroNome"><br>
+    
+    <label>Segundo Nome:</label>
+    <input type="text" id="segundoNome"><br>
+    
+    <label>Idade:</label>
+    <input type="number" id="idade"><br>
+    
+    <label>Nível de beleza (0 a 10):</label>
+    <input type="number" id="beleza"><br>
+    
+    <button onclick="validatePage1()">Próxima Página</button>
+  </div>
+
+  <div id="form-page2" class="form-container hidden">
+    <h2>
+      Brincadeira, só tem mais essa página kk  
+      Mas ainda não estou convencido que você seja a Maria, preencha esse formulário
+    </h2>
+    
+    <label>Seu nome:</label>
+    <input type="text" id="nomeCompleto"><br>
+    
+    <label>Nome do seu namorado:</label>
+    <input type="text" id="nomeNamorado"><br>
+    
+    <label>Idade do namorado:</label>
+    <input type="number" id="idadeNamorado"><br>
+    
+    <button onclick="validatePage2()">Finalizar</button>
+  </div>
+
+  <!-- QUIZ -->
+  <div id="quiz" class="quiz-container hidden">
+    <h1></h1>
+    <button class="heart-button" onclick="startQuiz()">❤️Iniciar❤️</button>
+
+    <div id="quiz-content" class="hidden">
+      <div id="quiz-progress"></div>
+      <h2 id="question-title"></h2>
+      <div id="questions-container"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
